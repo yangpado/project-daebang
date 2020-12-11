@@ -34,3 +34,16 @@ function fixHeader(){
 $(function(){
     Splitting();
 });
+
+// .top-visual slide slick js
+$(function(){
+    $('.visual .slide').slick({
+        arrow:true,
+        dots:true,
+        autoplay:true,
+        fade:true,
+        autoplaySpeed:7000,
+        pauseOnhover:false,
+        pauseOnfocus:false
+    });
+})
