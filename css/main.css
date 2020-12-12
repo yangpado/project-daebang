@@ -307,3 +307,58 @@ header.on .gnb ul.inner.on{
 .slick-next:before{
     right:0;
 }
+
+/* indicator */
+.visual .slide .slick-dots{
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform:translateX(-50%);
+}
+.visual .slide .slick-dots li{
+    width:2px;
+    height:20px;
+    float:left;
+    margin:0 10px;
+}
+.visual .slide .slick-dots li button{
+    width:100%;
+    height:100%;
+    background-color: #fff;
+    border:none;
+    text-indent: -9999px;
+}
+
+/* active indicator  */
+.visual .slide .slick-dots:hover,
+.visual .slide .slick-dots button:hover{
+    cursor:pointer;
+}
+.visual .slide .slick-dots li.slick-active button{
+    background-color: #f8b922;
+    height:28px;
+    margin-top:-12px;
+    transition:height 0.3s;
+}
+
+/* slide animation */
+/* gage bar */
+.visual .slick-active::after{
+    content:'';
+    width:100%;
+    height:5px;
+    background-color: #f8b922;
+    position:absolute;
+    left:0;
+    bottom:0;
+    animation-name:bar;
+    animation-duration:7s;
+}
+@keyframes bar{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%;
+    }
+}

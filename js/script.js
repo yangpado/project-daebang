@@ -39,7 +39,7 @@ $(function(){
 $(function(){
     $('.visual .slide').slick({
         arrow:true,
-        dots:false,
+        dots:true,
         autoplay:true,
         fade:true,
         autoplaySpeed:7000,
