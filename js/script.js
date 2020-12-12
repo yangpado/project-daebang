@@ -39,11 +39,12 @@ $(function(){
 $(function(){
     $('.visual .slide').slick({
         arrow:true,
-        dots:true,
+        dots:false,
         autoplay:true,
         fade:true,
         autoplaySpeed:7000,
         pauseOnhover:false,
         pauseOnfocus:false
     });
+    $('.slick-prev').text("prev");
 })
