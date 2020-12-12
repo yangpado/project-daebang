@@ -47,4 +47,18 @@ $(function(){
         pauseOnfocus:false
     });
     $('.slick-prev').text("prev");
-})
+
+    // .slide2 slide
+    $('.slide2').slick({
+        arrow:false,
+        dots:true,
+        autoplay:true,
+        infinite:true,
+        slidesToShow:2,
+        slideToScroll:1,
+        autoplaySpeed:5000,
+        pauseOnhover:true,
+        pauseOnfocus:true
+    });
+});
+
