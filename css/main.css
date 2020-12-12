@@ -193,9 +193,24 @@ header.on .gnb ul.inner.on{
     text-align:center;
     color:#fff;
 }
+.visual .slide li::before{
+    content:'';
+    width:32px;
+    height:32px;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:22%;
+    background:url(../img/symbol.png) no-repeat center/cover;
+    z-index:1;
+}
 .visual .slide li img{
     height:100%;
     width:auto;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%) scale(1);
+    top:0;
 }
 .visual .slide li .txt{
     position:absolute;
@@ -321,12 +336,16 @@ header.on .gnb ul.inner.on{
     float:left;
     margin:0 10px;
 }
+.visual .slide .slick-dots li::before{
+    display:none;
+}
 .visual .slide .slick-dots li button{
     width:100%;
     height:100%;
     background-color: #fff;
     border:none;
     text-indent: -9999px;
+    outline:0;
 }
 
 /* active indicator  */
@@ -361,4 +380,66 @@ header.on .gnb ul.inner.on{
     100%{
         width:100%;
     }
+}
+
+/* mask animation */
+@keyframes mask{
+    0%{
+        width:25%;
+        background-color: #000;
+    }
+    50%{
+        width:25%;
+        background-color: #000;
+    }
+    99%{
+        background:#000;
+    }
+}
+.visual .slick-active .mask.a{animation-name:mask; animation-duration:0.4s;}
+.visual .slick-active .mask.b{animation-name:mask; animation-duration:0.6s;}
+.visual .slick-active .mask.c{animation-name:mask; animation-duration:0.8s;}
+.visual .slick-active .mask.d{animation-name:mask; animation-duration:1s;}
+
+/* splitting text animation  */
+.visual .slick-active .splitting .char {
+    display:inline-block;
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+}
+@keyframes slide-up {
+    0%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    80%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    
+}
+/* find out more btn animation */
+.visual .slick-active a{
+    animation-name:slide-up2;
+    animation-duration: 1s;
+}
+@keyframes slide-up2{
+    0%{
+        bottom:20%;
+        opacity:0;
+    }
+    60%{
+        bottom:20%;
+        opacity:0;
+    }
+}
+.visual .slick-active img{
+    animation-name: img;
+    animation-duration: 7s;
+}
+@keyframes img{
+    0%{
+        transform: scale(1.2) translateX(-50%);
+    }
+    
 }
