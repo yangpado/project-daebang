@@ -60,5 +60,10 @@ $(function(){
         pauseOnhover:true,
         pauseOnfocus:true
     });
+
+    $('.slide2 #slick-slide-control10').text("서울 마곡지구 업무용지");
+    $('.slide2 #slick-slide-control11').text("서울 마곡지구 대방디엠시티2차");
+    $('.slide2 #slick-slide-control12').text("화성동탄1차 대방디엠시티 더 센텀");
+    $('.slide2 #slick-slide-control13').text("광주 수원 대방노블랜드 6차");
 });
 

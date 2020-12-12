@@ -666,3 +666,59 @@ header.on .gnb ul.inner.on{
 .contents .slideBox .slide2 li a .img span:hover::after{
     transform:translate(-50%, -50%) scale(1);
 }
+
+/* slick dots */
+.contents .slideBox .slide2 .slick-dots{
+    position:absolute;
+    left:-300px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.contents .slideBox .slide2 .slick-dots button{
+    height:35px;
+    background: none;
+    border:none;
+    font-size:16px;
+    position:relative;
+    padding-left:40px;
+    color:#000;
+    margin-bottom:50px;
+    text-align:left;
+    letter-spacing: -1px;
+}
+.contents .slideBox .slide2 .slick-dots button:hover{
+    cursor:pointer;
+}
+.contents .slideBox .slide2 .slick-dots button::before{
+    content:'01';
+    font-weight:bold;
+    color:#666;
+    font-size:30px;
+    font-family: 'Bebas Neue', cursive;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.contents .slideBox .slide2 .slick-dots li:nth-child(2) button::before{content:'02'}
+.contents .slideBox .slide2 .slick-dots li:nth-child(3) button::before{content:'03'}
+.contents .slideBox .slide2 .slick-dots li:nth-child(4) button::before{content:'04'}
+
+/* slick-dots underline animation */
+.contents .slideBox .slide2 .slick-dots .slick-active{
+    position:relative;
+    transition:all 0.3s;
+}
+.contents .slideBox .slide2 .slick-dots .slick-active::after{
+    content:'';
+    width:400px;
+    height:4px;
+    background:#f8b922;
+    position:absolute;
+    left:0;
+    bottom:30px;
+    animation-name:line;
+    animation-duration: 0.3s;
+}
+@keyframes line{
+    0%{left:-500px; opacity:0;}
+}
