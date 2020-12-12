@@ -503,3 +503,33 @@ header.on .gnb ul.inner.on{
         top:0;
     }
 }
+.contents .inner{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+}
+.contents .inner::after{
+    content:'';
+    width: 3px;height:60px;
+    position:absolute;
+    background-color: #f8b922;
+    left:50%;
+    transform:translateX(-50%);
+    top:-60px;
+}
+/* title (common) */
+.contents .title{
+    color:#666;
+
+}
+.contents .title .en{
+    font-size:62px;
+    letter-spacing: 10px;
+    color:#5d6168;
+    line-height:1.1;
+}
+.contents .title p{
+    font-size:24px;
+    margin-top:15px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
