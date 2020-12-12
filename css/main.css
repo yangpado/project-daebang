@@ -443,3 +443,63 @@ header.on .gnb ul.inner.on{
     }
     
 }
+
+/* content */
+.contents{
+    position:relative;
+    background-color: #fff;
+    height:500px;
+}
+.contents .line{
+    display:block;
+    position:absolute;
+    top:0;
+    width:1px;
+    height:100%;
+    background-color: #eee;
+}
+.contents .line.a{left:25%}
+.contents .line.b{left:50%}
+.contents .line.c{left:75%}
+
+/* information */
+.contents .information .scrollBox{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom:150px;
+}
+.contents .information .scrollBox .scroll{
+    display:block;
+    width:350px;
+    height:60px;
+    background-color: #f8b922;
+    padding-left:25px;
+    box-sizing:border-box;
+    font-size:20px;
+    letter-spacing: 2px;
+    position:relative;
+    line-height:60px;
+}
+.contents .information .scrollBox .scroll span{
+    width:60px;
+    height:60px;
+    position:absolute;
+    right:0;
+    top:0;
+    animation:scroll linear 0.8s 0s infinite;
+}
+.contents .information .scrollBox .scroll span img{
+    width:100%;
+}
+@keyframes scroll{
+    0%{
+        top:0;
+    }
+    50%{
+        top:7px;
+    }
+    100%{
+        top:0;
+    }
+}
