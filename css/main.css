@@ -774,8 +774,13 @@ header.on .gnb ul.inner.on{
     padding:130px 0;
     box-sizing: border-box;
     margin-top:150px;
-    background: url(../img/video3.jpg) no-repeat center/cover;
+    background: url(../img/video3.jpg) no-repeat center left 50%/cover;
     position:relative;
+    transition:all 0.5s;
+}
+.contents .video.motion{
+    background: url(../img/video3.jpg) no-repeat center left 20%/cover;
+    
 }
 .contents .video .inner::after{
     display:none;
@@ -825,4 +830,67 @@ header.on .gnb ul.inner.on{
 .contents .video .inner .more{
     color:#fff;
     bottom:80px;
+}
+
+/* video hover  */
+.contents .video .inner .videoBox:hover{
+    cursor:pointer
+}
+.contents .video .inner .videoBox .mask::before{
+    content:'';
+    width:0%;
+    height:6px;
+    background-color: #f8b922;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .video .inner .videoBox .mask::after{
+    content:'';
+    width:0%;
+    height:6px;
+    background-color: #f8b922;
+    position:absolute;
+    bottom:0;
+    right:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .video .inner .videoBox .mask span::before{
+    content:'';
+    width:6px;
+    height:0%;
+    background-color: #f8b922;
+    position:absolute;
+    bottom:0;
+    left:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .video .inner .videoBox .mask span::after{
+    content:'';
+    width:6px;
+    height:0%;
+    background-color: #f8b922;
+    position:absolute;
+    top:0;
+    right:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .video .inner .videoBox .mask:hover::before,
+.contents .video .inner .videoBox .mask:hover::after{
+    opacity:1;
+    width:100%;
+}
+.contents .video .inner .videoBox .mask span:hover::before,
+.contents .video .inner .videoBox .mask span:hover::after{
+    opacity:1;
+    height:100%;
 }

@@ -82,3 +82,11 @@ $(function(){
         $('html, body').animate({scrollTop:(scrollBtn)},400);
     });
 })
+
+// video 
+$(function(){
+    $('.videoBox .mask').on('click',function(){
+        $(this).css({'display':'none'});
+        $('.videoBox iframe').css({'display':'block'});
+    });
+});
