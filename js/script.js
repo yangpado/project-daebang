@@ -74,3 +74,11 @@ $(function(){
         once:false
     });
 });
+
+// scroll down btn click event
+$(function(){
+    $('.scroll').on('click', function(){
+        var scrollBtn = $('#scroll').offset().top;
+        $('html, body').animate({scrollTop:(scrollBtn)},400);
+    });
+})
