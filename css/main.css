@@ -1303,3 +1303,29 @@ header.on .gnb ul.inner.on{
     0%{transform:scale(0.4); opacity:0;}
     50%{transform:scale(0.4); opacity:0;}
 }
+
+/* footer */
+footer{
+    background-color: #191a1a;
+    padding:30px 60px;
+    color:#666;
+}
+footer ul{
+    clear:both;
+    margin-bottom:10px;
+    overflow:hidden;
+}
+footer ul:first-child{
+    font-weight:bold;
+    color:#aaa;
+    font-size:15px;
+}
+footer ul li{
+    float:left;
+    margin-right:20px;
+}
+footer p{
+    clear:both;
+    font-size:15px;
+    letter-spacing:1px;
+}
