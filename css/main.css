@@ -1053,7 +1053,7 @@ header.on .gnb ul.inner.on{
     position:absolute;
     top:0;
     left:25%;
-    background-color: red;
+    width:476px;
     padding:150px 0 100px;
 }
 .contents .news .inner::after{
@@ -1102,4 +1102,94 @@ header.on .gnb ul.inner.on{
 }
 .contents .news .newsList li:first-child a .category{
     background-color: #19293d;
+}
+.contents .news .newsList li a .subject{
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    color:#333;
+}
+.contents .news .newsList li a .date{
+    font-size:18px;
+    color:#999;
+    font-weight:normal;
+    margin:20px;
+    display:block;
+}
+.contents .news .newsList li a .desc{
+    margin-left:110px;
+    display:block;
+    text-align:justify;
+    font-size:15px;
+}
+
+/* news hover effect */
+.contents .news .newsList li a:hover{
+    background-color: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor:pointer
+}
+.contents .news .newsList li::before{
+    content:'';
+    width:0%;
+    height:1px;
+    background: linear-gradient(90deg, #f8b922 0%, #ffeb00 100%);
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .news .newsList li::after{
+    content:'';
+    width:0%;
+    height:1px;
+    background: linear-gradient(90deg, #ffeb00 0%, #f8b922 100%);
+    position:absolute;
+    bottom:0;
+    right:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .news .newsList li a::before{
+    content:'';
+    width:1px;
+    height:0%;
+    background: linear-gradient(90deg, #fff 0%, #f8b922 100%);
+    position:absolute;
+    bottom:0;
+    left:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .news .newsList li a::after{
+    content:'';
+    width:1px;
+    height:0%;
+    background: linear-gradient(90deg, #f8b922 0%, #fff 100%);
+    position:absolute;
+    top:0;
+    right:0;
+    opacity:0;
+    z-index:2;
+    transition: all 0.3s;
+}
+.contents .news .newsList li:hover::before,
+.contents .news .newsList li:hover::after{
+    opacity:1;
+    width:100%;
+}
+.contents .news .newsList li a:hover::before,
+.contents .news .newsList li a:hover::after{
+    opacity:1;
+    height:100%;
+}
+
+/* scroll symbol animation */
+.contents .news .symbol.motion{
+    animation-name:slide-up2;
+    animation-duration: 1s;
 }
