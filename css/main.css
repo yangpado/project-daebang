@@ -18,7 +18,6 @@ a:hover{text-decoration:none; color:inherit;}
 body{
     font-family: 'Noto Sans KR', sans-serif;
     font-size:14px;
-    background-color: #eee;;
 }
 .wrap{
     width:100%;
@@ -449,7 +448,6 @@ header.on .gnb ul.inner.on{
 .contents{
     position:relative;
     background-color: #fff;
-    height:500px;
     margin-bottom:5000px;
 }
 .contents .line{
@@ -894,3 +892,31 @@ header.on .gnb ul.inner.on{
     opacity:1;
     height:100%;
 }
+
+/* business */
+.contents .business{
+    position:relative;
+}
+.contents .business .inner{
+    position:absolute;
+    width:476px;
+    top:0;
+    padding:150px 0 100px;
+    left:25%;
+}
+.contents .business .inner::after{
+    top:0;
+    left:0;
+}
+.contents .business .list{
+    width:1520px;
+    height:1250px;
+    margin:auto;
+    position:relative;
+}
+.contents .business .list li{
+    position:absolute;
+}
+.contents .business .list li:nth-child(1){left:-50px; top:500px;}
+.contents .business .list li:nth-child(2){right:193px; top:150px;}
+.contents .business .list li:nth-child(3){right:-50px; bottom:0px;}
