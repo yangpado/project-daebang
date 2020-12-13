@@ -67,3 +67,10 @@ $(function(){
     $('.slide2 #slick-slide-control13').text("광주 수원 대방노블랜드 6차");
 });
 
+// scroll animation (scrolla.js)
+$(function(){
+    $('.animate').scrolla({
+        mobile:true, //모바일시 활성화
+        once:false
+    });
+});

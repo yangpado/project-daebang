@@ -522,7 +522,6 @@ header.on .gnb ul.inner.on{
 /* title (common) */
 .contents .title{
     color:#666;
-
 }
 .contents .title .en{
     font-size:62px;
@@ -534,6 +533,29 @@ header.on .gnb ul.inner.on{
     font-size:24px;
     margin-top:15px;
     font-family: 'Noto Sans KR', sans-serif;
+}
+/* button (common) */
+.contents .more{
+    display:inline-blcok;
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-size:22px;
+    padding-bottom:8px;
+    color:#666;
+}
+.contents .more::after{
+    content:'';
+    width:70%;
+    height:4px;
+    background-color: #f8b922;
+    position:absolute;
+    bottom:0;
+    left:0;
+    transition:all 0.3s;
+}
+.contents .more:hover::after{
+    width:100%;
 }
 
 /* slide2 */
@@ -721,4 +743,27 @@ header.on .gnb ul.inner.on{
 }
 @keyframes line{
     0%{left:-500px; opacity:0;}
+}
+
+/* title en animation  */
+.motion .char{
+    display:inline-block;
+    animation: slide-up2 0.4s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(70ms * var(--char-index));
+}
+@keyframes slide-up2 {
+    0%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    30%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+}
+
+/* title ko animation */
+.motion .title p{
+    animation: slide-up2;
+    animation-duration:1s;
 }
