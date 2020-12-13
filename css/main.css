@@ -928,7 +928,7 @@ header.on .gnb ul.inner.on{
     position:relative;
 }
 .contents .business .list a .img{
-    
+    overflow:hidden;
 }
 .contents .business .list a .img img{
     width:100%;
@@ -1003,4 +1003,42 @@ header.on .gnb ul.inner.on{
     top:50%;
     transform:translate(-50%, -50%);
     background-color: #f8b922;
+}
+
+/* business hover effect */
+.contents .business .list a:hover .img img{
+    transform:scale(1.1);
+}
+.contents .business .list a:hover .txt{
+    background-color: #f8b922;
+}
+.contents .business .list a:hover h3,
+.contents .business .list a:hover h3 span,
+.contents .business .list a:hover p{
+    color:#fff;
+}
+.contents .business .list a:hover .icon::after,
+.contents .business .list a:hover .icon::before{
+    background-color: #fff;
+}
+.contents .business .list a:hover .icon{
+    border-color:#fff;
+}
+
+/* business scroll animation */
+.contents .business .list li.motion a .img img{
+    animation-name:list;
+    animation-duration:1s;
+}
+@keyframes list{
+    0%{transform:translateX(-200px); opacity:0;}
+    30%{transform:translateX(-200px); opacity:0;}
+}
+.contents .business .list li.motion:nth-child(2) a .img img{
+    animation-name:list2;
+    animation-duration:1s;
+}
+@keyframes list2{
+    0%{transform:translateX(200px); opacity:0;}
+    30%{transform:translateX(200px); opacity:0;}
 }
