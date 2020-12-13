@@ -448,7 +448,6 @@ header.on .gnb ul.inner.on{
 .contents{
     position:relative;
     background-color: #fff;
-    margin-bottom:5000px;
 }
 .contents .line{
     display:block;
@@ -555,6 +554,15 @@ header.on .gnb ul.inner.on{
 .contents .more:hover::after{
     width:100%;
 }
+/* inner::after animation */
+.motion::after{
+    animation-name:slide-down;
+    animation-duration: 0.5s;
+}
+@keyframes slide-down{
+    0%{transform:translateY(-80px);opacity:0;}
+}
+
 
 /* slide2 */
 .contents .slideBox{
