@@ -1219,3 +1219,40 @@ header.on .gnb ul.inner.on{
     background: url(../img/career.jpg) no-repeat right 0% center/50%;
     transition:all 0.6s;
 }
+
+/* customer */
+.contents .customers{
+    background-color: red;
+    margin:180px 0 0;
+    background: url(../img/customer.jpg) no-repeat center/cover;
+    position:relative;
+    padding:100px 0;
+    transition:all 1s;
+}
+
+.contents .customers .inner{
+    overflow:hidden;
+}
+.contents .customers .inner .en,
+.contents .customers .inner p {
+    color:#fff;
+}
+.contents .customers .inner .left{
+    float:left;
+    padding-bottom:80px;
+}
+.contents .customers .inner .right{
+    float:right;
+    margin-top:80px;
+}
+.contents .customers .inner .right li{
+    float:left;
+    margin-left:25px;
+}
+.contents .customers .inner .right li a{
+    display:block;
+    border:1px solid rgba(255,255,255,0.4);
+    box-sizing: border-box;
+    position:relative;
+    transition:all 0.3s;
+}
